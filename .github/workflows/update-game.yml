@@ -16,8 +16,8 @@ jobs:
         with:
           fetch-depth: 2  # required so the action can detect + amend the previous GIF commit
 
-      # Pinned to the commit behind the v2 tag as of 2026-03-13
-      - uses: czl9707/gh-space-shooter@96d45ed9a790300da731b9fc49b95d697f528464
+      # Pinned to Rumbles/gh-space-shooter fork main @ 2026-04-15 (hardened: setup-python v6, pinned bump-my-version, script-injection fix, explicit permissions)
+      - uses: Rumbles/gh-space-shooter@9d8bf8259672a4e9e0710107344c794c9f2fb593
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-path: 'game.gif'
