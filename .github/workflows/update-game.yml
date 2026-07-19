@@ -16,8 +16,8 @@ jobs:
         with:
           fetch-depth: 2  # required so the action can detect + amend the previous GIF commit
 
-      # Pinned to Rumbles/gh-space-shooter fork main @ 2026-07-19 (adds exponential-backoff retry on transient GitHub API 502s / "resource limits" errors; prior: setup-python v6, script-injection fix, explicit permissions)
-      - uses: Rumbles/gh-space-shooter@97671aac1152e42d5a7f4f3ea99ec6184c657616
+      # Pinned to Rumbles/gh-space-shooter fork main @ 2026-07-19 (#3: fetch contribution calendar in 4-week windows to dodge GraphQL "resource limits exceeded"; installs from source; paces requests + retries secondary rate limits)
+      - uses: Rumbles/gh-space-shooter@b2fa74aecd2374dd1d3f03cd38a6ba6b5420ddb1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-path: 'game.gif'
