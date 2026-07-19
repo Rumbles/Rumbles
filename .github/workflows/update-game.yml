@@ -16,8 +16,8 @@ jobs:
         with:
           fetch-depth: 2  # required so the action can detect + amend the previous GIF commit
 
-      # Pinned to Rumbles/gh-space-shooter fork main @ 2026-04-15 (hardened: setup-python v6, pinned bump-my-version, script-injection fix, explicit permissions)
-      - uses: Rumbles/gh-space-shooter@9d8bf8259672a4e9e0710107344c794c9f2fb593
+      # Pinned to Rumbles/gh-space-shooter fork main @ 2026-07-19 (adds exponential-backoff retry on transient GitHub API 502s / "resource limits" errors; prior: setup-python v6, script-injection fix, explicit permissions)
+      - uses: Rumbles/gh-space-shooter@97671aac1152e42d5a7f4f3ea99ec6184c657616
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-path: 'game.gif'
